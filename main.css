@@ -1,3 +1,70 @@
-.pull {
-    background-color: black;
+body{
+	line-height: 30px;
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+	color: #5E6282;
+	font-weight: 400;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.container{
+    width: 100%;
+	max-width: 1200px;
+	margin: 49px auto 0;
+	padding: 0 20px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo{
+    position: relative;
+    z-index: 3;
+}
+
+.header__menu{
+    position: relative;
+}
+
+.header__list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__item{   
+    padding: 0 20px;
+    margin: 0 11px;
+    position: relative;
+    z-index: 4;
+}
+
+.header__item::before{
+    content: "";
+    position: absolute;
+    border: 2px solid #212832;
+    border-radius: 5px;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    bottom: 0%;
+    transition: .2s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header__item:hover::before{
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
 }
